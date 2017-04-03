@@ -29,6 +29,11 @@ include $(LOCAL_PATH)/board/*.mk
 TARGET_KMODULES := true
 BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
+#Bliss
+BLISS_O3 := true
+BLISS_GRAPHITE := true
+BLISS_PIPE := true
+
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
