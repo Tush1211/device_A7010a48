@@ -17,6 +17,9 @@
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/tesla/config/common_full_phone.mk)
 
+#Telephony stuff
+$(call inherit-product, vendor/tesla/config/caf_fw.mk)
+
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device_A7010a48.mk)
 
