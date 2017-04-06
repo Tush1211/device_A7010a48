@@ -1,6 +1,5 @@
 # Camera
 USE_CAMERA_STUB := true
-USE_MTK_CAMERA_WRAPPER := true
 
 # Legacy HAL
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
