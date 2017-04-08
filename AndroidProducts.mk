@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/tesla.mk
+    $(LOCAL_DIR)/nitrogen_A7010a48.mk
