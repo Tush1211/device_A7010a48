@@ -1437,9 +1437,9 @@ service usbdongled /system/bin/dongled
 #
 service zpppd_gprs /system/bin/init.gprs-pppd
     user root
-	group radio cache inet misc
-	disabled
-	oneshot
+    group radio cache inet misc
+    disabled
+    oneshot
 #
 # add the service for call pppd(end)
 #
@@ -1468,4 +1468,9 @@ service vtservice /system/bin/vtservice
     user system
     group system camera graphics inet net_admin net_raw media sdcard_rw radio sdcard_r media_rw
     ioprio rt 4
-   
+	
+SPM - Service Power Manager
+service spm_script /system/bin/spm_loader
+    class core
+    user root
+    group root
