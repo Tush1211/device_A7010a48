@@ -49,6 +49,3 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 # Block based ota
 # see http://review.cyanogenmod.org/#/c/78849/1/core/Makefile
 BLOCK_BASED_OTA := false
-
-# Comment this flag in case of userdebug builds
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := false
