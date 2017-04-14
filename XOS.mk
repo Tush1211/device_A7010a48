@@ -14,11 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/tesla/config/common_full_phone.mk)
-
-#Telephony stuff
-$(call inherit-product, vendor/tesla/config/caf_fw.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/xos/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device_A7010a48.mk)
@@ -32,6 +29,6 @@ PRODUCT_BRAND := lenovo
 PRODUCT_DEVICE := A7010a48
 PRODUCT_MANUFACTURER := LENOVO
 PRODUCT_MODEL := Lenovo K4 Note
-PRODUCT_NAME := tesla_A7010a48
+PRODUCT_NAME := XOS_A7010a48
 PRODUCT_RELEASE_NAME := A7010a48
 PRODUCT_RESTRICT_VENDOR_FILES := false
