@@ -181,8 +181,6 @@ type oemkeystore_block_device, dev_type;
 type mmcblk0_block_device, dev_type;
 type mmcblk1_block_device, dev_type;
 type mmcblk1p1_block_device, dev_type;
-type spm_device, dev_type;
-type persist_block_device, dev_type;
 type md_block_device, dev_type;
 type dsp_block_device, dev_type;
 type ppl_block_device, dev_type;

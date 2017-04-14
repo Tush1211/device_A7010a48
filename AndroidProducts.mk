@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/XOS_A7010a48.mk
+    $(LOCAL_DIR)/XOS.mk
