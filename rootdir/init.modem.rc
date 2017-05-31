@@ -1,3 +1,9 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+   
 on post-fs-data
 
     write /proc/bootprof "post-fs-data: on modem start"
@@ -14,7 +20,7 @@ on post-fs-data
     chown media audio /dev/ccci_aud
     chmod 660 /dev/ccci_aud
 
-    # SELinux
+    # Selinux
     mkdir /data/ccci_cfg 0770 system radio
     restorecon /data/ccci_cfg
     restorecon_recursive /protect_f
@@ -135,6 +141,10 @@ service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
 #  Modem related services (End)
 #
 
+#Add by hp.chen for 
+#
+#   Telephony Early Read service
+#
 service terservice /system/bin/terservice
     class core
     user radio
@@ -143,3 +153,4 @@ service terservice /system/bin/terservice
 
 on property:ril.muxreport=1
     start muxreport-daemon
+
