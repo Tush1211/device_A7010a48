@@ -38,6 +38,7 @@ loglevel 5
     mkdir /cache 0770 system cache
     mkdir /config 0500 root root
 
+# Mount staging areas for devices managed by vold
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt 0755 root system
     mount tmpfs tmpfs /mnt mode=0755,uid=0,gid=1000
@@ -120,9 +121,11 @@ loglevel 5
     trigger boot
 
 on fs
+#INTERNAL_START
     write /proc/bootprof "INIT:Mount_START"
-    mount_all /fstab.mt6735					
+    mount_all /fstab.mt6735
     write /proc/bootprof "INIT:Mount_END"
+#INTERNAL_END
 
 on post-fs
     start logd
@@ -436,7 +439,6 @@ on property:sys.powerctl=*
     powerctl ${sys.powerctl}
 ## Daemon processes to be run by init.
 ##
-
 service ueventd /sbin/ueventd
     class core
     critical
