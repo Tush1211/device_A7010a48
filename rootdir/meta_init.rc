@@ -26,7 +26,7 @@ on init
 loglevel 5
     write /proc/bootprof "INIT: on init start"
 
-# Backward compatibility
+    # Backward compatibility.
     symlink /system/etc /etc
     symlink /sys/kernel/debug /d
 
@@ -472,8 +472,11 @@ service mobile_log_d /system/bin/mobile_log_d
 on property:ro.boot.usbconfig=0
     write /sys/class/android_usb/android0/iSerial $ro.serialno
     write /sys/class/android_usb/android0/enable 0
+
     write /sys/class/android_usb/android0/idVendor 0e8d
     write /sys/class/android_usb/android0/idProduct 2006
+
+
     write /sys/class/android_usb/android0/f_acm/instances 1
     write /sys/class/android_usb/android0/functions mass_storage,adb,acm
     write /sys/class/android_usb/android0/enable 1
